@@ -7,11 +7,12 @@ namespace RRSP_Shared_Classes
     [Serializable]
     public class RPS_Data_Packet
     {
-        public RPS_Types.RPS_Type RPS_Type { get => RPS_Type; set => RPS_Type = value; }
+        private RPS_Types.RPS_Type rpsType;
+        public RPS_Types.RPS_Type RPS_Type { get => this.rpsType; set => this.rpsType = value; }
 
-        public RPS_Data_Packet(RPS_Types.RPS_Type rPS_Type, RPS_Types.RPS_Type rPS_Type1)
+        public RPS_Data_Packet(RPS_Types.RPS_Type rPS_Type)
         {
-            RPS_Type = rPS_Type;
+            rpsType = rPS_Type;
         }
     }
 }
